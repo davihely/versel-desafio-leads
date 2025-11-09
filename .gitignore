@@ -1,0 +1,19 @@
+# Node
+server/node_modules/
+npm-debug.log
+.env
+
+# React
+client/node_modules/
+client/build/
+
+# IDEs e sistema
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Se quiser ignorar o projeto React inteiro:
+# client/
