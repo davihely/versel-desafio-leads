@@ -5,7 +5,7 @@ import botImage from "../assets/robot.png";
 const ChatLists = ({chats}) => {
     const endOfMessages = useRef()
     const user = localStorage.getItem('user')
-    function SenderChat({ message, username, avatar, timestamp }) {
+    function SenderChat({ message, sessionId, avatar, timestamp }) {
       return (
         <div className="bubble-block right">
           <div className="bubble-box user w-85">
@@ -18,7 +18,7 @@ const ChatLists = ({chats}) => {
       );
     }
 
-    function ReceiverChat({ message, username, avatar, timestamp }) {
+    function ReceiverChat({ message, sessionId, avatar, timestamp }) {
       return (
         <div className="bubble-block left">
           <div className="row">
@@ -30,7 +30,7 @@ const ChatLists = ({chats}) => {
               />
             </div>
             <div className="stack">
-              <div className="sender">{username || "Assistente"}</div>
+              <div className="sender">Assistente</div>
               <div className="bubble-box assistant">
                 <div className="bubble bubble-secondary">{message}</div>
                 <div className="timestamp t-right">
@@ -57,7 +57,7 @@ const ChatLists = ({chats}) => {
                   return <SenderChat 
                   key={index}
                   message = {chat.message}
-                  username = {chat.username}
+                  sessionId = {chat.sessionId}
                   avatar = {chat.avatar}
                   timestamp = { chat.timestamp }/>
               }
@@ -65,7 +65,7 @@ const ChatLists = ({chats}) => {
                   return <ReceiverChat 
                   key={index}
                   message = {chat.message}
-                  username = {chat.username}
+                  sessionId = {chat.sessionId}
                   timestamp = { chat.timestamp }/>
                 }
           })

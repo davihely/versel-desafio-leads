@@ -8,9 +8,8 @@ const InputText = ({ addMessage }) => {
   const handleSend = () => {
     if (!message.trim()) return;
     const newMessage = {
-      username: localStorage.getItem("user"),
+      sessionId: localStorage.getItem("sessionId"),
       message: message.trim(),
-      avatar: localStorage.getItem("avatar"),
       timestamp: Date.now(),
       role: 'user'
     };

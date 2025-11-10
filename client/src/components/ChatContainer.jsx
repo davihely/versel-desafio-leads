@@ -2,12 +2,15 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { FaYoutube } from "react-icons/fa6";
 import ChatLists from "./ChatLists";
 import InputText from "./InputText";
-import UserLogin from "./UserLogin";
 import socketIOClient from "socket.io-client";
 import "../style.css";
 import botImage from "../assets/robot.png";
 
 const ChatContainer = () => {
+  if (!localStorage.getItem("sessionId")) {
+    localStorage.setItem("sessionId", crypto.randomUUID());
+  }
+  
   useEffect(() => {
     const savedChats = JSON.parse(localStorage.getItem("chats"));
     if (savedChats && savedChats.length > 0) {
@@ -18,6 +21,7 @@ const ChatContainer = () => {
   const [user, setUser] = useState(localStorage.getItem("user"));
   const [open, setOpen] = useState(false);
   const [botTyping, setBotTyping] = useState(false);
+  const sessionId = localStorage.getItem("sessionId");
 
   useEffect(() => {
     const t = setTimeout(() => setOpen(true), 150);
@@ -32,8 +36,14 @@ const ChatContainer = () => {
       socketRef.current = socketIOClient("http://localhost:3001");
     }
     const s = socketRef.current;
-
     s.on("message", (msg) => {
+      if (msg.message.includes("Sessão expirada")) {
+        alert("Sua sessão expirou. O chat será reiniciado.");
+        localStorage.removeItem("chats");
+        localStorage.removeItem("sessionId");
+        setChats([]); 
+        return;
+      }
       handelBotMassage(msg);
     });
 
@@ -54,7 +64,13 @@ const ChatContainer = () => {
 
     setBotTyping(true);
 
-    socketRef.current?.emit("newMessage", chat);
+    const chatHistory = JSON.parse(localStorage.getItem("chats")) || [];
+
+    socketRef.current?.emit("newMessage", {
+      sessionId: sessionId,
+      message: chat,
+      history: chatHistory,
+    });
   };
 
   const handelBotMassage = (chat) => {
@@ -106,8 +122,6 @@ const ChatContainer = () => {
         </div>
       );
   }
-
-  if (!user) return <UserLogin setUser={setUser} />;
 
   return (
     <>
