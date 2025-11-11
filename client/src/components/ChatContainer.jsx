@@ -15,6 +15,14 @@ const ChatContainer = () => {
     const savedChats = JSON.parse(localStorage.getItem("chats"));
     if (savedChats && savedChats.length > 0) {
       setChats(savedChats);
+    } else {
+      const welcome = {
+        role: "bot",
+        message: "Olá! 👋 Eu sou o assistente da Verzel. Como posso te ajudar hoje?",
+        timestamp: Date.now(),
+      };
+      setChats([welcome]);
+      localStorage.setItem("chats", JSON.stringify([welcome]));
     }
   }, []);
 
@@ -37,13 +45,6 @@ const ChatContainer = () => {
     }
     const s = socketRef.current;
     s.on("message", (msg) => {
-      if (msg.message.includes("Sessão expirada")) {
-        alert("Sua sessão expirou. O chat será reiniciado.");
-        localStorage.removeItem("chats");
-        localStorage.removeItem("sessionId");
-        setChats([]); 
-        return;
-      }
       handelBotMassage(msg);
     });
 

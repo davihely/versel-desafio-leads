@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "verzel-lead-teste",
+  "private_key_id": "de6c4ad1fac8054fe03a51e57dc48aeb79e71b0b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCt+JkVPk+7KKGB\nx/f+NMuBGNv/zLZUd6Mvig7pq9zVXRho9jI+JcTXT3/4Y2mG7D8MmsyCIYUCZgmU\ncJtE08OIkKHNG9daA6zLe65zEF5DDZ/EvIeFFX2AA6M3N1SEYz6t0IMwxRx7IdzF\nPQm8ufcXaP8lUdtMe9pQUIR13sruOo1LJ+pw7iiQ/OkeOzmFjrh0JYNfVes0MiEI\n2PCheAxFrOsSBZ1dLB/es8cDiH63c8IiVA6d7X/dbyNN57yVy8FXTrhdhFH7Xmuv\nXnRXagdNVUewjCWan9IkrXyW2JwgS1fy3iNBNanLeIWt0rWAPKYRutyNcDeGUWkG\noK9Oag95AgMBAAECggEAE846d02pvA/rGyBN3lXaWS8gVKXUmBcqr83S1s1nDa9U\niRaGL8cS+sQlOHzw1ZhtsRyqbaItR1Ggg5KySoqlNxXoJbamtKu4b038VUMmyBFz\n/+zKrN7+c6V2XmHhMFUwHI+hb9rw3B/Fx3qkciTluXeNnI0OH032U7Bm9BhSF/7I\nZXbhrzOLtIr9Dk9w0H7C/goZdqGe3TneeuGE5pQsilqk5qVuRbsCEeekzoAWe2kZ\n9LyqKhf5bTAQRcuthe3xYy/83HmLReja9yoiMV3D0de3qa5G3BvS1+PvO++/crdl\n4v35qAZ8J5k8L/HeeM1GeT8vf57bfPjiku5/ZveitQKBgQDaCE7v4HhH4J2SzLDt\nn/ccfTf0mJAqq0tiQRqbUoLPlni7OouoICpYHvnV7PPM4PsscOPBl2zKosCVrltg\ns8b8YP0shJdGQ7b+Ij08pIdumHA4rVTsAeeZgP4v+IOqm/qvEUgsS9NluE5boxai\nX/9Xu8+ii+2kObuufwuCsdKcQwKBgQDMRBLBMTQAmIlHqDqey9axG4BKtg9Mq1M/\nxEctDrCBqs48546mlxmZdyHqkGQk5v1BdptmWxOUJaqOqEyqVUF9hUhiJIkAWDqG\n1p9ERicTjmDoH6mIgBg6KK9LhmIAxQhGh8MqUr3E6aJU0pB8BzwhRDD9ug+PBBsL\nnVV67fGHkwKBgCRJO7HqXro/pJnY3R0/ASZJpLVdaqjfRzV79kyhR8n6le87CCEb\n8VAnH5c9zzlqvAKiaxU9+UokGf8PPH/0i4pXLetpya9U97CFzEE6dJuwXQThu/9n\nNb8zW5pqNqd/PBJEwwk0OWN1b/0KQGsXpOxaAm1f8lXhkd2xoR3IMG/3AoGBALHI\nTcp32JrsKA+GC/9JyoI7PV3JN2ezdbF6U7iToGw7DWVU5IN5334CgjJ1mbPEl4fy\ngy6C9ndqkRe4w4E80tM8vdMtmVADem0BP31c0YXj1dQyOovjcTKtVmSVgZbJ5nn8\nj5C2kxRfhDnvSnGoml0ZzMoItqHzINbrCQsFLcKhAoGAakAD0hee9LPRdfMh1BLt\n0TA8TUdIX/C5V14+Pb7B0o+aCyGU3B0grzVVh3tmOWyya7zHZQYpLkPi71uVlej2\n5gq5e3qLiGEBMx0GH3I5WQLnkZtf9UCwjMfMcoQB94+p3ZTZ5rMhk1zfoKRzGqhU\n3zMWo1ICZI8XehnE7txyjF0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "verzel-lead-teste@verzel-lead-teste.iam.gserviceaccount.com",
+  "client_id": "114003878553143749283",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/verzel-lead-teste%40verzel-lead-teste.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
